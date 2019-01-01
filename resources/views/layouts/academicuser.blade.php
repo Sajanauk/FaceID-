@@ -25,20 +25,6 @@
             <div class="container">
                         <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                            <li class="nav-item dropdown">
-                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="home" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                        Feed data
-                                    </a>
-
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="{{ route('home') }}">
-                                            Tissue data
-                                        </a>
-                                        <a class="dropdown-item" href="{{ route('home') }}">
-                                            Facial data
-                                        </a>
-                                    </div>
-                                </li>
                                 <span class="caret"></span>
                                 <li class="nav-item dropdown">
                                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="home" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

@@ -14,28 +14,27 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
-
-Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
-
-
 //load homepage
 Route::get('/index', 'HomepageController@show_homepage');
 
-//select user levels
-/*
-Route::get('/home',function(){
-if(Auth::user()->user_level=="Admin"){
-    return view('admin.adminpanel');
-}elseif (Auth::user()->user_level=="Academic user") {
-    return view('academicuser.academicuser_panel');
-}else{
-$users['users']=\App\User::all();
-return view('home',$users);
-}
+//view user login homepages
+Route::get('/home', 'HomeController@index')->name('home');
+
+//login & registration views
+Auth::routes();
+
+//view feed_tissue_data page
+Route::get('/feed_tissue_data', function () {
+    return view('activeuser.Feed_tissue_data');
 });
-*/
+
+// save tissue data by active user
+Route::post('/save_tissue_data','Feed_tissue_data_Controller@savetissuedata');
+
+
+
+
+
 
 
 

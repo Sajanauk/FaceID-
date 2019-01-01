@@ -18,28 +18,31 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/feed_data.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/table.css') }}" rel="stylesheet">
+</head>
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md " style="background-color: #31E3BD;">
+            <nav class="navbar navbar-expand-md " style="background-color: #31E3BD;">
             <div class="container">
                         <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                            <li class="nav-item dropdown">
-                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="home" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                        Feed data
-                                    </a>
-
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="{{ route('home') }}">
-                                            Tissue data
-                                        </a>
-                                        <a class="dropdown-item" href="{{ route('home') }}">
-                                            Facial data
-                                        </a>
-                                    </div>
-                                </li>
                                 <span class="caret"></span>
+                                <li class="nav-item dropdown">
+                                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="home" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                            Feed data
+                                        </a>
+
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="/feed_tissue_data">
+                                                Tissue data
+                                            </a>
+                                            <a class="dropdown-item" href="{{ route('home')}}">
+                                                Facial data
+                                            </a>
+                                        </div>
+                                    </li>
                                 <li class="nav-item dropdown">
                                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="home" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                             Visualise  data
@@ -67,6 +70,9 @@
                                                     Upload Documents
                                                 </a>
                                             </div>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link" href="{{ route('login') }}">{{ __('Create Groups') }}</a>
                                         </li>
 
                     </ul>
